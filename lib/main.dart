@@ -74,6 +74,29 @@ class _StoryPageState extends State<StoryPage> {
                   ),
                 ),
               ),
+              Expanded(
+                flex: 2,
+                child: Visibility(
+                  visible: !storyBrain.buttonShouldBeVisible(),
+                  child: FlatButton(
+                    onPressed: () {
+                      setState(() {
+                        storyBrain.nextStory(1);
+                      });
+                      //Choice 1 made by user.
+                      //TODO: Step 18 - Call the nextStory() method from storyBrain and pass the number 1 as the choice made by the user.
+                    },
+                    color: Colors.red,
+                    child: Text(
+                      //TODO: Step 13 - Use the storyBrain to get the text for choice 1.
+                      storyBrain.getChoice1(),
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               SizedBox(
                 height: 20.0,
               ),
