@@ -64,7 +64,7 @@ class StoryBrain {
         break;
       default:
         {
-          restarStory();
+          resetarStory();
         }
         break;
     }
@@ -78,7 +78,7 @@ class StoryBrain {
     return retorno;
   }
 
-  void restarStory() {
+  void resetarStory() {
     _storyNumber = 0;
   }
 
